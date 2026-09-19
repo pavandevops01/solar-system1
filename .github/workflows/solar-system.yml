@@ -102,7 +102,7 @@ jobs:
           tags: ${{ vars.DOCKERHUB_USERNAME }}/solar-system:${{ github.sha }}
       - name: Docker Image Testing
         run: |
-        docker Images
+        docker images
         docker run --name solar-system-app -d \
            -p 3000:3000 \
            -e MONGO_URI=$MONGO_URI \
