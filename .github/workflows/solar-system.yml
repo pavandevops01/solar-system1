@@ -64,10 +64,10 @@ jobs:
     container:
       image: node:18
     services:
-     mongo-db:
-       image: pavan401/mongo-db:non-prod
-       options:
-         -- name mongo
+      mongo-db:
+        image: pavan401/mongo-db:non-prod
+        options:
+          --name mongo
     env: 
       MONGO_URI: 'mongodb://mongo:27017/superData'
       MONGO_USERNAME: non-prod-user
