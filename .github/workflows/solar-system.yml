@@ -11,6 +11,15 @@ env:
  MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
 jobs:
   unit-testing:
+    services:
+     mongo-db:
+       image: pavan401/mongo-db:non-prod
+       ports:
+         - 27017:27017
+    env: 
+      MONGO_URI: 'mongodb//localhost:27017/superData'
+      MONGO_USERNAME: non-prod-user
+      MONGO_PASSWORD: non-prod-password
     strategy:
         matrix:
           nodejs_version: [18, 20]
