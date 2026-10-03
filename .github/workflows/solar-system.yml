@@ -168,8 +168,7 @@ jobs:
         uses: azure/setup-kubectl@v4
         with:
           version: 'v1.26.0'
-      
-      steps:
+
       - name: Kubernetes KinD Cluster
         id: kind
         uses: helm/kind-action@v1
